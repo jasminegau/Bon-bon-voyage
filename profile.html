@@ -9,7 +9,7 @@
 <body>
     <nav id="navbar">
         <div id="hamburger-menu" onclick="toggleHamburgerMenu()">☰</div>
-        <img src="logo_placeholder.png" alt="Logo" id="logo">
+        <img src="images/logo.png" alt="Logo" id="logo">
         <div id="nav-links">
             <a href="home.html">Home</a>
             <a href="booking.html">Booking</a>
@@ -26,13 +26,14 @@
     <body>
         <!-- Main Content Area -->
         <div id="profile-main">
-            <!-- Display User Information -->
-            <h2>User Profile</h2>
+            <!-- Display User Information (from database later)-->
+            <h2>My Profile</h2>
             <div id="user-info">
-                <p><strong>Name:</strong> John Doe</p>
-                <p><strong>Email:</strong> johndoe@example.com</p>
-                <p><strong>Phone:</strong> +1234567890</p>
-                <p><strong>Location:</strong> City, Country</p>
+                <img id="avatar" src="placeholder.png">
+                <p><strong>Name:</strong> John Doe, 18</p>
+                <p><strong>Pronouns:</strong> they/them</p>
+                <p><strong>Email:</strong> johndoe@usc.edu</p>
+                <p><strong>School:</strong> University of Southern California (USC)</p>
             </div>
 
             <!-- Edit Profile Button -->
@@ -43,21 +44,34 @@
                 <h3>Edit Profile</h3>
                 <form id="profile-form">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required><br><br>
-
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required><br><br>
-
-                    <label for="age">Age:</label>
-                    <input type="text" id="age" name="age"><br><br>
+                    <input type="text" id="name" name="name" required><br>
 
                     <label for="gender">Gender:</label>
-                    <input type="radio" id="gender" name="gender" value="male">Male<br>
-                    <input type="radio" id="gender" name="gender" value="female">Female<br>
-                    <input type="radio" id="gender" name="gender" value="other">Other/Prefer Not to Say<br>
-                    <br>
+                    <select name="gender" id="gender">
+                        <option value="">-Select Gender-</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other-na">Other/Prefer Not to Say</option>
+                    </select>
+                    <br><br>
 
-                    <input type="submit" value="Save Changes">
+                    <label for="pronouns">Pronouns:</label>
+                    <select name="pronouns" id="pronouns">
+                        <option value="">-Select Pronouns-</option>
+                        <option value="he-him">he/him</option>
+                        <option value="she-her">she/her</option>
+                        <option value="they-them">they/them</option>
+                        <option value="other">ask me!</option>
+                    </select>
+                    <br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
+
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age"><br>
+
+                    <input type="submit" value="Save Changes" id="profile-change-save-btn">
                 </form>
             </div>
         </div>
