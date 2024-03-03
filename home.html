@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="hamburger-menu" onclick="toggleHamburgerMenu()">☰</div>
+        <img src="logo_placeholder.png" alt="Logo" id="logo">
+        <div id="nav-links">
+            <a href="home.html">Home</a>
+            <a href="booking.html">Booking</a>
+            <a href="message.html">Message</a>
+        </div>
+    </nav>
+    <div id="hamburger-dropdown" class="hidden">
+        <a href="profile.html">Profile</a>
+        <a href="contact_us.html">Contact Us</a>
+        <a href="report.html">Report</a>
+        <a href="community_guide.html">Community Guide</a>
+        <a href="donate.html">Donate</a>
+    </div>
+    <body>
+        <!-- Navigation Bar from previous example -->
+    
+        <!-- Banner -->
+        <div id="banner">
+            Every 5 rides you book, we donate $5 to the girls community.
+        </div>
+    
+        <!-- Main Content Area -->
+        <div id="main-content">
+            <!-- Left Side (Flight Tickets) -->
+            <div id="left-side">
+                <!-- Flight Ticket 1 -->
+                <div class="flight-ticket">
+                    <div class="flight-info">
+                        <span class="date">Date: 2024-03-02</span>
+                        <span class="time">Time: 10:00 AM</span>
+                        <span class="companions">Riding with: Alice</span>
+                        <span class="destination">Destination: JFK Airport</span>
+                    </div>
+                </div>
+                <!-- Flight Ticket 2 -->
+                <!-- Similar to Flight Ticket 1 -->
+            </div>
+    
+            <!-- Right Side (Personal Rides) -->
+            <div id="right-side">
+                <div class="personal-ride">
+                    <div class="ride-info">
+                        <span>Date: 2024-03-02</span>
+                        <span>Time: 10:00 AM</span>
+                        <span>Destination: JFK Airport</span>
+                        <button onclick="editRide(this)">Edit</button>
+                        <button onclick="deleteRide(this)">Delete</button>
+                    </div>
+                </div>
+                <!-- More personal rides -->
+            </div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

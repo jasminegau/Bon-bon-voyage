@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#signin_signup_container {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    background-color: #007bff;
+    padding: 10px;
+    color: white;
+}
+
+#hamburger-menu {
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+#hamburger-dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+#hamburger-dropdown {
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 200px;
+    z-index: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+#banner {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    border-bottom: 1px solid #ddd;
+}
+
+#main-content {
+    display: flex;
+}
+
+#left-side, #right-side {
+    width: 50%;
+    padding: 20px;
+}
+
+.flight-ticket {
+    background-image: url('path_to_your_image.jpg'); /* Replace with your image path */
+    background-size: cover;
+    height: 200px; /* Adjust as necessary */
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.personal-ride {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.personal-ride .ride-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+#booking-form-container {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#booking-form input, #booking-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#results-container {
+    margin: 20px auto;
+    padding: 20px;
+}
