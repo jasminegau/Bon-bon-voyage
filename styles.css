@@ -80,21 +80,23 @@ body, html {
     display: flex;
 }
 
-#left-side, #right-side {
+#right-side {
     width: 50%;
-    padding: 20px;
-}    
+    padding:20px;
+} 
+#left-side {
+    width: 50%;
+    padding:20px
 
+} 
 .flight-ticket {
     background-image: url('images/flightTicket.png'); /* Replace with your image path */
     background-size: contain;
-    background-repeat: no-repeat;
-    height: 148px; /* Adjust as necessary */
-    width: 300px;
+    background-repeat:no-repeat;
+    height: 200px; /* Adjust as necessary */
+    width: 900px;
     padding: 30px;
 }
-
-
 
 .personal-ride {
     border: 1px solid #ccc;

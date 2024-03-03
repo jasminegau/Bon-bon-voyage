@@ -1,4 +1,8 @@
 <style>
+    h1{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+    }
     .image-container {
         width: 100%;
         max-width: 500px; /* Adjust the max-width to your desired value */
@@ -27,14 +31,14 @@
 
     .flight-info {
         position: relative;
-        top: 40%;
+        top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: #000;
-        font-size: 15px;
+        font-size: 20px;
         text-align: left;
         overflow:hidden;
-        padding: 20px;
+        padding: 80px;
     }
 
     .flight-info span {
@@ -47,6 +51,13 @@
         justify-content: space-between;
         align-items: center;
         flex-direction:row;
+        margin:5px;
+    }
+    .buttons button{
+        margin-right:10px;
+        width:100px;
+        border-radius:10%;
+
     }
 
 
@@ -91,6 +102,7 @@
         <div id="main-content">
             <!-- Left Side (Flight Tickets) -->
             <div id="left-side">
+                <h1><p>Upcoming Matched Rides</p></h1>
                 <!-- Flight Ticket 1 -->
                 <div class="flight-ticket">
                     
@@ -104,11 +116,36 @@
                     
                 </div>
                 <!-- Flight Ticket 2 -->
+                <div class="flight-ticket">
+                    
+                    <div class="flight-info">
+                        <span class="date">Flight Date: 2024.03.02</span>
+                        <span class="time">Time: 10:00 AM</span>
+                        <span class="companions">Riding with: Alice</span>
+                        <span class="destination">Destination: JFK </span>
+                    </div>
+                    
+                    
+                </div>
+                <!-- Flight Ticket 3 -->
+                <div class="flight-ticket">
+                    
+                    <div class="flight-info">
+                        <span class="date">Flight Date: 2024.03.02</span>
+                        <span class="time">Time: 10:00 AM</span>
+                        <span class="companions">Riding with: Alice</span>
+                        <span class="destination">Destination: JFK </span>
+                    </div>
+                    
+                    
+                </div>
+                
                 <!-- Similar to Flight Ticket 1 -->
             </div>
     
             <!-- Right Side (Personal Rides) -->
             <div id="right-side">
+                <h1><p>Personal Rides</p></h1>
                 <di class="personal-ride">
                     <div class="ride-info">
                         <span>Date: 2024-03-02</span>
@@ -120,7 +157,17 @@
                         <button onclick="deleteRide(this)">Delete</button>
                     </div>
                 </di>        
-
+                <di class="personal-ride">
+                    <div class="ride-info">
+                        <span>Date: 2024-03-02</span>
+                        <span>Time: 10:00 AM</span>
+                        <span>Destination: JFK</span>
+                    </div>
+                    <div class="buttons">
+                        <button onclick="editRide(this)">Edit</button>
+                        <button onclick="deleteRide(this)">Delete</button>
+                    </div>
+                </di>       
             </div>
                 
                 <!-- More personal rides -->
