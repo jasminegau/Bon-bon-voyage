@@ -129,6 +129,7 @@ button {
     padding: 20px;
 }
 
+<<<<<<< HEAD
 #profile-main {
     width: 100%;
     padding: 20px;
@@ -137,4 +138,28 @@ button {
 #logo {
     width: 60px;
     height: auto
+=======
+#message-container {
+    display: flex;
+    height: 90vh; /* Adjust based on your header/footer size */
+}
+
+#contact-list {
+    width: 30%;
+    background-color: #f2f2f2;
+    overflow-y: auto;
+}
+
+#chat-interface {
+    width: 70%;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+.contact {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+>>>>>>> 64e0d6418c71c581aa1c9d50ed8e568213957508
 }
