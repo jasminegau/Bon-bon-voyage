@@ -1,0 +1,69 @@
+<style>
+    #contact-main{
+        padding: 20px;
+    }
+    h2, p {
+        text-align: center;
+    }
+
+    #contact-submit-btn {
+        width: 30%;
+        background-color: #8AC8F5;
+    }
+
+    textarea {
+        width: 50%;
+        font-family: Arial, sans-serif;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bon-Bon Voyage - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="hamburger-menu" onclick="toggleHamburgerMenu()">☰</div>
+        <img src="images/logo.png" alt="Logo" id="logo" id="logo">
+        <div id="nav-links">
+            <a href="home.html">Home</a>
+            <a href="booking.html">Booking</a>
+            <a href="message.html">Message</a>
+        </div>
+    </nav>
+    <div id="hamburger-dropdown" class="hidden">
+        <a href="profile.html">Profile</a>
+        <a href="donate.html">Donate</a>
+        <a href="community_guidelines.html">Community Guidelines</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="report.html">Report</a>
+    </div>
+<body>    
+    <!-- Main Content Area -->
+    <div id="contact-main">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear any feedback or questions you may have!</p>
+        <form id="contact-form">
+            <strong><label for="name">Name:</label></strong>
+            <input type="text" id="name" name="name" required><br>
+
+            <strong><label for="email">Email:</label></strong>
+            <input type="text" id="email" name="email" required><br>
+
+            <strong><label for="subject">Subject:</label></strong>
+            <input type="text" id="subject" name="subject" required><br>
+            
+            <strong><label for="message">Message:</label><br></strong>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            
+            <input id="contact-submit-btn" type="submit" value="Submit">
+        </form>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
