@@ -15,72 +15,76 @@
 
 <body>
    <nav id="navbar">
-       <div id="hamburger-menu">☰</div>
-       <img src="../images/logo.png" alt="Logo" id="logo">
-       <div id="nav-links">
-           <a href="../home.html">Home</a>
-           <a href="../booking.html">Booking</a>
-           <a href="../message.html">Message</a>
-       </div>
-   </nav>
-   <div id="hamburger-dropdown" class="hidden">
-       <a href="index.html">Profile</a>
-       <a href="../donate.html">Donate</a>
-       <a href="community_guidelines.html">Community Guidelines</a>
-       <a href="../contact.html">Contact Us</a>
-       <a href="../report.html">Report</a>
-   </div>
+        <div id="hamburger-menu">☰</div>
+        <img src="../images/logo.png" alt="Logo" id="logo">
+        <div id="nav-links">
+            <a href="home.html">Home</a>
+            <a href="booking.html">Booking</a>
+            <a href="message.html">Message</a>
+        </div>
+    </nav>
+    <div id="hamburger-dropdown" class="hidden">
+        <a href="index.html">Profile</a>
+        <a href="../donate.html">Donate</a>
+        <a href="../community_guidelines.html">Community Guidelines</a>
+        <a href="../contact.html">Contact Us</a>
+        <a href="../report.html">Report</a>
+    </div>
+    <body>
+        <!-- Main Content Area -->
+        <div id="profile-main">
+            <!-- Display User Information (from database later)-->
+            <h2>My Profile</h2>
+            <div id="user-info">
+                <img id="avatar" alt="avatar" src="../images/avatar1.png">
+                <p id="name-display"><strong>Name:</strong> John Doe, 18</p> 
+                <p id="pronouns-display"><strong>Pronouns:</strong> they/them</p>
+                <p id="email-display"><strong>Email:</strong> johndoe@usc.edu</p>
+                <p id="school-display"><strong>School:</strong> University of Southern California (USC)</p>
+            </div>
 
+            <!-- Edit Profile Button -->
+            <button id="edit-profile-btn">Edit Profile</button>
 
-   <body>
-       <!-- Main Content Area -->
-       <div id="profile-main">
-           <!-- Display User Information -->
-           <h2>User Profile</h2>
-           <div id="user-info">
-               <p id="name-display"><strong>Name:</strong> John Doe</p>
-               <p id="email-display"><strong>Email:</strong> johndoe@example.com</p>
-               <p id="phone-display"><strong>Phone:</strong> +1234567890</p>
-               <p id="location-display"><strong>Location:</strong> City, Country</p>
-           </div>
+            <!-- Edit Profile Section (Initially Hidden) -->
+            <div id="edit-profile" style="display: none;">
+                <h3>Edit Profile</h3>
+                <form id="profile-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br>
 
+                    <label for="gender">Gender:</label><br>
+                    <select name="gender" id="gender">
+                        <option value="">-Select Gender-</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other-na">Other/Prefer Not to Say</option>
+                    </select>
+                    <br><br>
 
-           <!-- Edit Profile Button -->
-           <button id="edit-profile-btn" onclick="toggleEditProfile()">Edit Profile</button>
+                    <label for="pronouns">Pronouns:</label><br>
+                    <select name="pronouns" id="pronouns">
+                        <option value="">-Select Pronouns-</option>
+                        <option value="he-him">he/him</option>
+                        <option value="she-her">she/her</option>
+                        <option value="they-them">they/them</option>
+                        <option value="other">ask me!</option>
+                    </select>
+                    <br><br>
 
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
 
-           <!-- <div id="display">nothing to display</div> -->
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age"><br>
 
+                    <label for="school">School:</label>
+                    <input type="text" id="school" name="school"><br>
 
-           <!-- Edit Profile Section (Initially Hidden) -->
-           <div id="edit-profile" style="display: none;">
-               <h3>Edit Profile</h3>
-               <div id="profile-form">
-                   <label for="name">Name:</label>
-                   <input type="text" id="name" name="name" required><br><br>
-
-
-                   <label for="email">Email:</label>
-                   <input type="email" id="email" name="email" required><br><br>
-                   <input type="phone" id="phone" name="phone" required><br><br>
-                   <input type="text" id="location" name="location" required><br><br>
-
-
-                   <label for="age">Age:</label>
-                   <input type="text" id="age" name="age"><br><br>
-
-
-                   <label for="gender">Gender:</label>
-                   <input type="radio" id="gender" name="gender" value="male">Male<br>
-                   <input type="radio" id="gender" name="gender" value="female">Female<br>
-                   <input type="radio" id="gender" name="gender" value="other">Other/Prefer Not to Say<br>
-                   <br>
-
-
-                   <button id="save">Save Changes</button>
-               </div>
-           </div>
-       </div>
+                    <input type="submit" value="Save Changes" id="save">
+                </form>
+            </div>
+        </div>
 
    </body>
 </html>
