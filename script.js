@@ -47,3 +47,12 @@ function createPost() {
     // Confirm the information and upload the post
     alert('Post creation functionality not implemented');
 }
+
+function toggleEditProfile() {
+    var editProfileSection = document.getElementById("edit-profile");
+    if (editProfileSection.style.display === "none") {
+        editProfileSection.style.display = "block";
+    } else {
+        editProfileSection.style.display = "none";
+    }
+}
