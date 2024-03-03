@@ -47,3 +47,20 @@ function createPost() {
     // Confirm the information and upload the post
     alert('Post creation functionality not implemented');
 }
+
+document.getElementById('yes-make-own').addEventListener('click', function() {
+    window.location.href = 'confirm_post.html'; // This redirects the user to the confirmation page
+});
+
+document.getElementById('confirm-and-post').addEventListener('click', function() {
+    // Here you would handle the posting of the ride
+    // This might involve collecting the details from the 'ride-details' div and sending it to the server
+    alert('Your ride has been posted!');
+});
+
+function openChat(contactName) {
+    var chatInterface = document.getElementById('chat-interface');
+    // Here you would load the chat messages with the selected contact
+    chatInterface.innerHTML = '<p>Chat with ' + contactName + '</p>';
+    // Implement AJAX call to server to get the chat messages
+}

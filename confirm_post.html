@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Page</title>
+    <title>Confirm Your Ride</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,25 +23,13 @@
         <a href="community_guide.html">Community Guide</a>
         <a href="donate.html">Donate</a>
     </div>
-    <!-- Booking Form -->
-    <div id="booking-form-container">
-        <form id="booking-form">
-            <input type="text" id="starting-point" placeholder="Starting Point" required>
-            <input type="text" id="destination" placeholder="Airport Destination" required>
-            <input type="text" id="gate-airline" placeholder="Gate/Airline" required>
-            <input type="time" id="time" required>
-            <input type="number" id="number-of-people" placeholder="Number of People" required>
-            <label>
-                <input type="checkbox" id="girls-only">
-                Ride with girls only
-            </label>
-            <button type="submit">Search</button>
-        </form>
-    </div>
-
-    <!-- Results Section -->
-    <div id="results-container">
-        <!-- Dynamic content will be loaded here based on search results -->
+    <div id="confirm-ride-container">
+        <!-- Here you would dynamically fill in the details the user entered previously -->
+        <p>Please confirm your ride details:</p>
+        <div id="ride-details">
+            <!-- Dynamically generated ride details go here -->
+        </div>
+        <button id="confirm-and-post">Confirm and Post My Ride</button>
     </div>
 
     <script src="script.js"></script>
