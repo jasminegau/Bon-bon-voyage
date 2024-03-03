@@ -48,7 +48,6 @@ function createPost() {
     alert('Post creation functionality not implemented');
 }
 
-<<<<<<< HEAD
 function toggleEditProfile() {
     var editProfileSection = document.getElementById("edit-profile");
     if (editProfileSection.style.display === "none") {
@@ -56,6 +55,7 @@ function toggleEditProfile() {
     } else {
         editProfileSection.style.display = "none";
     }
+}
 
 document.getElementById('yes-make-own').addEventListener('click', function() {
     window.location.href = 'confirm_post.html'; // This redirects the user to the confirmation page
