@@ -56,7 +56,7 @@ function toggleEditProfile() {
     } else {
         editProfileSection.style.display = "none";
     }
-=======
+
 document.getElementById('yes-make-own').addEventListener('click', function() {
     window.location.href = 'confirm_post.html'; // This redirects the user to the confirmation page
 });
@@ -72,5 +72,4 @@ function openChat(contactName) {
     // Here you would load the chat messages with the selected contact
     chatInterface.innerHTML = '<p>Chat with ' + contactName + '</p>';
     // Implement AJAX call to server to get the chat messages
->>>>>>> 64e0d6418c71c581aa1c9d50ed8e568213957508
 }
