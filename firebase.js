@@ -2,6 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebas
 
 
 import { getDatabase, ref, child, get, set, update, remove, push, onValue } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
 
 
 const firebaseConfig = {
@@ -20,6 +21,7 @@ const app = initializeApp(firebaseConfig);
 
 
 export const db = getDatabase();
+export const auth = getAuth(app);
 
 
 export {
@@ -30,5 +32,6 @@ export {
    push,
    onValue,
 }
+
 
 
