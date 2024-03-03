@@ -32,6 +32,3 @@ export {
 }
 
 
-console.log('SDFDF', db)
-
-

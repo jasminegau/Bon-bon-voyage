@@ -117,11 +117,6 @@ body, html {
 
 }
 
-button {
-    padding: 5px 10px;
-    margin-left: 10px;
-}
-
 #booking-form-container {
     width: 300px;
     margin: 20px auto;

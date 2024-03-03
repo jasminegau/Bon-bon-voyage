@@ -1,9 +1,21 @@
+<style>
+    input[type="text"], input[type="time"] {
+        width: 80%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+    #booking-form-container{
+        background-color: #AAABC7;
+    }
+</style>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Page</title>
+    <title>Bon-Bon Voyage - Booking</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -23,27 +35,29 @@
         <a href="../community_guide.html">Community Guide</a>
         <a href="../donate.html">Donate</a>
     </div>
+    <center><h1>Booking</h1></center>
     <!-- Booking Form -->
     <div id="booking-form-container">
         <form id="booking-form">
-            <input type="text" id="starting-point" placeholder="Starting Point" required>
-            <input type="text" id="destination" placeholder="Airport Destination" required>
-            <input type="text" id="gate-airline" placeholder="Gate/Airline" required>
+            <input type="text" id="start" placeholder="Start: Airport/School" required>
+            <input type="text" id="dest" placeholder="Destination: Airport/School" required>
             <input type="time" id="time" required>
-            <input type="number" id="number-of-people" placeholder="Number of People" required>
-            <label>
-                <input type="checkbox" id="girls-only">
-                Ride with girls only
-            </label>
-            <button type="submit">Search</button>
+            <input type="number" id="num-passengers" placeholder="Number of Passengers" required>
+            <!-- <label for="girls-only" id="girl">
+                <input type="checkbox" id="girls-only"> <span>Ride with Girls Only</span>
+            </label> -->
+            <button id="search">Search</button>
         </form>
     </div>
 
     <!-- Results Section -->
     <div id="results-container">
         <!-- Dynamic content will be loaded here based on search results -->
+        
     </div>
 
     <script type="module" src="../script.js"></script>
+    <script type="module" src="../firebase.js"></script>
+    <script type="module" src="booking.js"></script>
 </body>
 </html>
