@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Messages</title>
     <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Additional styles for the messaging page */
+        #message-container {
+            display: flex;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        #contact-list {
+            width: 20%;
+            border-right: 1px solid #ccc;
+            overflow-y: auto;
+        }
+
+        .contact {
+            
+            cursor: pointer;
+            background-color: #fff;
+        }
+
+        .contact:hover {
+            background-color: #f5f5f5;
+        }
+
+        #chat-interface {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+    </style>
 </head>
 <body>
     <nav id="navbar">
@@ -26,14 +56,40 @@
     <div id="message-container">
         <div id="contact-list">
             <!-- List of contacts -->
+            <div class="contact" onclick="openChat('chatbot-BonBon')">chatbot-BonBon</div>
             <div class="contact" onclick="openChat('Alice')">Alice</div>
             <div class="contact" onclick="openChat('Bob')">Bob</div>
+            <div class="contact" onclick="openChat('Haley')">Haley</div>
+            <div class="contact" onclick="openChat('Lian')">Lian</div>
+            <div class="contact" onclick="openChat('Jasmine')">Jasmine</div>
+            <div class="contact" onclick="openChat('Kashvi')">Kashvi</div>
             <!-- Add more contacts here -->
         </div>
         <div id="chat-interface">
+            <div id="chat-header"></div>
+            <div id="chat-messages"></div>
             <!-- Chat messages will be loaded here -->
         </div>
     </div>
+    <script type="module" src="../script.js"></script>
+    <script>
+        function openChat(contactName) {
+            // Placeholder function to load chat messages for the selected contact
+            const chatHeader = document.getElementById('chat-header');
+            const chatMessages = document.getElementById('chat-messages');
+
+            // Update the chat header with the selected contact's name
+            chatHeader.innerText = `Chat with ${contactName}`;
+
+            // Load and display chat messages (replace this with your logic)
+            // For demonstration, just adding some dummy messages
+            chatMessages.innerHTML = `
+                <div>Hi, how are you?</div>
+                <div>Good, thanks! How about you?</div>
+                <div>I'm doing well too. Any plans for the weekend?</div>
+            `;
+        }
+    </script>
 
     <script type="module" src="../script.js"></script>
 </body>
