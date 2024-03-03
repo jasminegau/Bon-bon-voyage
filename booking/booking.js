@@ -7,6 +7,8 @@ function bookingSearch() {
     const StartLoc = document.getElementById('start').value;
     const DestLoc = document.getElementById('dest').value;
     const Date = document.getElementById('date').value;
+    const Time = document.getElementById('time').value;
+
 
     // const newResult = {
     //     StartLoc: StartLoc,
@@ -32,20 +34,28 @@ function bookingSearch() {
     onValue(tripRef, (snapshot) => {
         const data = snapshot.val();
         if (data){
+            let count = 0;
+            const resultsContainer = document.getElementById("results-container");
+            resultsContainer.innerHTML = ""; // clear it all
+
             Object.keys(data).forEach(tripId => {
                 const tripData = data[tripId];
-                let count = 0;
-                if(tripData.StartLoc === StartLoc && tripData.DestLoc === DestLoc && tripData.Date === Date){
+                if(tripData.StartLoc === StartLoc && tripData.DestLoc === DestLoc && tripData.Date === Date && tripData.Time <= Time){
                     displaySearchResults(tripData);
                     count += 1;
                 }
+                // isNewBookingDisplayed = true;
+                console.log("COUNT RN", count);
                 console.log(tripId);
                 console.log(tripData);
-
-                if (count === 0 && !isNewBookingDisplayed){
-                    displayNewBooking();
-                }
             });
+            
+            console.log("COUNT AFTER", count);
+
+            if (count === 0 && !isNewBookingDisplayed){
+                displayNewBooking();
+                isNewBookingDisplayed = true;
+            }
         }
         // console.log('data', data);
         // document.getElementById('display').innerHTML += `
@@ -118,7 +128,7 @@ function bookingSearch() {
 
     const newBookButton = document.createElement("button");
     newBookButton.className = "newbook-btn";
-    newBookButton.type = "button";
+    newBookButton.type = "submit";
     newBookButton.textContent = "Create New Booking";
     resultElement.appendChild(newBookButton);
 
@@ -127,6 +137,8 @@ function bookingSearch() {
     newBookButton.addEventListener('click', newBooking);
     
     isNewBookingDisplayed = true;
+    // isNewBookingDisplayed = false;
+
  }
 
  function newBooking(){
@@ -157,7 +169,10 @@ function bookingSearch() {
  function loaded(){
     const userId = "-Ns14WSA_TyTZXMtA_mL"; // Replace with the actual user ID
     const userRef = ref(db, 'users/' + userId);
- 
+    isNewBookingDisplayed = false;
+    const resultsContainer = document.getElementById("results-container");
+    resultsContainer.style.display = "none";
+
     // Fetch user information from Firestore
     get(userRef).then((snapshot) => {
         if (snapshot.exists()) {
