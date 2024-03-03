@@ -65,6 +65,7 @@
         position: fixed;
         top: 50%;
         left: 50%;
+        width:60%;
         transform: translate(-50%, -50%);
         padding: 20px;
         background-color: rgb(201, 201, 201);
@@ -72,7 +73,10 @@
         z-index: 1;
     }
     #popupContent{
-        text-align:center;
+        text-align:left;
+        width: 100%;
+        max-width:600px;
+        margin:0 auto;
     }
 
 
@@ -213,15 +217,16 @@
                     // Content for Edit button
                     popupContent = `
                         <h2>Edit Ride</h2>
-                        
+                        <p>Starting Point</p>
                         <input type="text" id="start" placeholder="Start: Airport/School" required>
+                        <p>Destination</p>
                         <input type="text" id="dest" placeholder="Destination: Airport/School" required>
+                        <p>Date</p>
                         <input type="date" id="date" required>
+                        <p>Time</p>
                         <input type="time" id="time" required>
+                        <p>Number of Passengers</p>
                         <input type="number" id="num-passengers" placeholder="Number of Passengers" required>
-                        <!-- <label for="girls-only" id="girl">
-                        <input type="checkbox" id="girls-only"> <span>Ride with Girls Only</span>
-                        </label> -->
                         <button type="button" onclick="closePopup()" id="edit">Confirm Ride Edit</button>
                     `;
                 } else if (button.classList.contains('delete-button')) {
