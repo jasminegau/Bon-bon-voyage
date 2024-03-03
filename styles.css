@@ -169,7 +169,7 @@ button {
 }
 
 input[type="text"], input[type="email"] {
-    width: 50%;
+    width: 80%;
     padding: 8px;
     box-sizing: border-box;
 }

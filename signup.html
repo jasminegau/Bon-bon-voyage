@@ -1,5 +1,8 @@
 <style>
-    .container {
+    body {
+        background-color: #AAABC7;
+    }
+    #signin_signup_container {
         background-color: #733D7B;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         border-radius: 20px;
@@ -7,61 +10,89 @@
         align-items: center;
         justify-content: center;
         flex-direction: row;
+        text-align: center;
         margin: auto;
         position: absolute;
-        width: 500px;
-        height:500px;
+        width: 250px;
+        height:525px;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
     }
     h1{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 15px;
-            margin-bottom:10px;
-            margin:0;
-            text-align: left;
-            align-items: center;
-            color: #FFFFFF;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+    }
+    h2{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        margin:0;
+        text-align: center;
+        align-items: center;
+        color: #FFFFFF;
+    }
+    #signup-btn{
+        width: 30%;
+        background-color: #8AC8F5;
+    }
+    a:link {
+        color: #8AC8F5;
+    }
+    a:visited {
+        color: #AAABC7;
+    }
+
+    input[type="password"]{
+        width: 50%;
+        padding: 8px;
+        box-sizing: border-box;
     }
 </style>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Log In</title>
+    <title>Bon-bon Voyage - Sign Up</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="signin_signup_container">
         <!-- Sign In Form -->
         <div class="container">
+            <img src="images/logo.png" width="100px">
+            <br>
             <form id="signin_form">
+                <center>
                 <h1>SIGN IN</h1>
                 <ul></ul>
-                <h1>Full Name</h1>
+                <h2>Full Name</h2>
                 <input type="text" placeholder="Full Name">
-                <h1>School</h1>
+                <ul></ul>
+                <h2>School</h2>
                 <input type="text" placeholder="School">
-                <h1>Age</h1>
+                <ul></ul>
+                <h2>Age</h2>
                 <input type="number" placeholder="Your Age">
-                <h1>Gender</h1>
+                <ul></ul>
+                <h2>Gender</h2>
                 <label for="gender"></label>
                 <select id="gender" name="gender">
+                    <option value="">-Select a gender-</option>
                     <option value="female">Female</option>
                     <option value="male">Male</option>
-                    <option value="prefer_not_to_say">Prefer not to say</option>
+                    <option value="na">Other/Prefer not to say</option>
                 </select>
-                <h1>School Email</h1>
+                <ul></ul>
+                <h2>School Email</h2>
                 <input type="email" placeholder="School Email">
-                <h1>Profile Picture</h1>
+                <!-- <h2>Profile Picture</h2>
                 <input type="file" id="profilePicture" accept="image/*" onchange="previewImage(event)">
-                <img id="preview" src="#" alt="Preview Image" style="display: none; max-width: 200px; max-height: 200px;">
+                <img id="preview" src="#" alt="Preview Image" style="display: none; max-width: 200px; max-height: 200px;"> -->
                 <ul></ul>
-                <button type="submit">Sign In</button>
+                <button type="submit" id="signup-btn">Sign Up</button>
                 <ul></ul>
-                    
+            </center>    
             </form>
         </div>       
     </div>
