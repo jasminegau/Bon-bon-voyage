@@ -1,6 +1,5 @@
-import {db, auth, set, ref, push, onValue, get, child} from '../firebase.js'
-
-const searchResults = [];
+import {db, set, ref, push, onValue, get, child} from '../firebase.js'
+let isNewBookingDisplayed = false; // Flag variable
 
 function bookingSearch() {
     console.log('yoyoyoyo');
@@ -8,8 +7,6 @@ function bookingSearch() {
     const StartLoc = document.getElementById('start').value;
     const DestLoc = document.getElementById('dest').value;
     const Date = document.getElementById('date').value;
-    const Time = document.getElementById('time').value;
-    const NumPass = document.getElementById('num-passengers').value;
 
     // const newResult = {
     //     StartLoc: StartLoc,
@@ -18,16 +15,6 @@ function bookingSearch() {
     //     Time: Time,
     //     NumPass: NumPass
     // };
-
-    // searchResults.push(newResult);
-
-    push(ref(db, 'trips'), {
-        StartLoc: StartLoc,
-        DestLoc: DestLoc,
-        Date: Date,
-        Time: Time,
-        NumPass: NumPass
-    });
 
     // displaySearchResults(searchResults);
  
@@ -39,26 +26,33 @@ function bookingSearch() {
     //     from: "tenessee",
     //     date: "12 May, 2024"
     //   });
+
+    // RETRRIVEING DATA
+    const tripRef = ref(db, 'trips');
+    onValue(tripRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data){
+            Object.keys(data).forEach(tripId => {
+                const tripData = data[tripId];
+                let count = 0;
+                if(tripData.StartLoc === StartLoc && tripData.DestLoc === DestLoc && tripData.Date === Date){
+                    displaySearchResults(tripData);
+                    count += 1;
+                }
+                console.log(tripId);
+                console.log(tripData);
+
+                if (count === 0 && !isNewBookingDisplayed){
+                    displayNewBooking();
+                }
+            });
+        }
+        // console.log('data', data);
+        // document.getElementById('display').innerHTML += `
+        //     <div>${JSON.stringify(data)}</div>
+        // `;
+    });
 }
-
-
-// RETRRIVEING DATA
-const tripRef = ref(db, 'trips');
-onValue(tripRef, (snapshot) => {
-    const data = snapshot.val();
-    if (data){
-        Object.keys(data).forEach(tripId => {
-            const tripData = data[tripId];
-            displaySearchResults(tripData);
-            console.log(tripId);
-            console.log(tripData);
-        });
-    }
-    // console.log('data', data);
-    // document.getElementById('display').innerHTML += `
-    //     <div>${JSON.stringify(data)}</div>
-    // `;
-});
  
 
  function displaySearchResults(result){
@@ -110,6 +104,55 @@ onValue(tripRef, (snapshot) => {
     //     resultsContainer.style.display = "none";
     // }
  }
+
+ function displayNewBooking(){
+    const resultsContainer = document.getElementById("results-container");
+    resultsContainer.style.display = "block";
+
+    const resultElement = document.createElement("div");
+    resultElement.classList.add("no-results-item");
+
+    const noResultMsg = document.createElement("h4");
+    noResultMsg.textContent = "No results! Click below to create a new booking for others to join:";
+    resultElement.appendChild(noResultMsg);
+
+    const newBookButton = document.createElement("button");
+    newBookButton.className = "newbook-btn";
+    newBookButton.type = "button";
+    newBookButton.textContent = "Create New Booking";
+    resultElement.appendChild(newBookButton);
+
+    resultsContainer.appendChild(resultElement);
+    
+    newBookButton.addEventListener('click', newBooking);
+    
+    isNewBookingDisplayed = true;
+ }
+
+ function newBooking(){
+    const StartLoc = document.getElementById('start').value;
+    const DestLoc = document.getElementById('dest').value;
+    const Date = document.getElementById('date').value;
+    const Time = document.getElementById('time').value;
+    const NumPass = document.getElementById('num-passengers').value;
+
+    push(ref(db, 'trips'), {
+        StartLoc: StartLoc,
+        DestLoc: DestLoc,
+        Date: Date,
+        Time: Time,
+        NumPass: NumPass
+    });
+    isNewBookingDisplayed = false;
+    const resultsContainer = document.getElementById("results-container");
+    resultsContainer.style.display = "none";
+
+    document.getElementById('start').value = ''; // or set to default value
+    document.getElementById('dest').value = ''; // or set to default value
+    document.getElementById('date').value = ''; // or set to default value
+    document.getElementById('time').value = ''; // or set to default value
+    document.getElementById('num-passengers').value = ''; // or set to default value
+}
  
  function loaded(){
     const userId = "-Ns14WSA_TyTZXMtA_mL"; // Replace with the actual user ID
