@@ -14,23 +14,23 @@
     }
 
     #container {
-      align-items: center;
-      justify-content: center;
       text-align: center;
-      padding:20px;
+      padding: 20px;
     }
 
     .button-container {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px; /* Adjust the gap between buttons */
     }
 
     .circle-button {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 10px; /* Adjust margin as needed */
+      cursor: pointer;
     }
 
     .circle-button img {
@@ -43,49 +43,104 @@
     .button-text {
       margin-top: 5px; /* Adjust margin to set the spacing between image and text */
     }
+    #popup{
+        display:none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: rgb(201, 201, 201);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    #popupContent{
+        text-align:center;
+    }
+    input,
+    button{
+        margin-top:10px;
+        width:80%;
+        box-sizing:border-box;
+    }
+    input::placeholder {
+        width:200px
+    }
   </style>
 </head>
 
 <body>
   <nav id="navbar">
-        <div id="hamburger-menu" onclick="toggleHamburgerMenu()">☰</div>
-        <img src="images/logo.png" alt="Logo" id="logo" id="logo">
-        <div id="nav-links">
-            <a href="home.html">Home</a>
-            <a href="booking.html">Booking</a>
-            <a href="message.html">Message</a>
+    <div id="hamburger-menu" onclick="toggleHamburgerMenu()">☰</div>
+    <img src="images/logo.png" alt="Logo" id="logo" id="logo">
+    <div id="nav-links">
+        <a href="home.html">Home</a>
+        <a href="booking.html">Booking</a>
+        <a href="message.html">Message</a>
+    </div>
   </nav>
 
   <div id="hamburger-dropdown" class="hidden">
-        <a href="profile.html">Profile</a>
-        <a href="donate.html">Donate</a>
-        <a href="community_guidelines.html">Community Guidelines</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="report.html">Report</a>
+    <a href="profile.html">Profile</a>
+    <a href="donate.html">Donate</a>
+    <a href="community_guidelines.html">Community Guidelines</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="report.html">Report</a>
   </div>
-  </body>
-  <body>
-    <div id="container">
-        <h1>Donate</h1>
-        <p><strong>Donate now, close the gender gap</strong></p>
-        <p>Your small devotion matters. Donate for closing the gender gap and support girls in STEM.</p>
-        <p><strong>Choose an organization</strong></p>
-        <div class="button-container">
-          <div class="circle-button">
-            <img src="images/athenahacks_logo.png" alt="athenaHacks">
-            <span class="button-text">AthenaHacks</span>
-          </div>
-          <div class="circle-button">
-            <img src="images/AWIS_logo.png" alt="AWIS">
-            <span class="button-text">Association for Women in Science</span>
-          </div>
-          <div class="circle-button">
-            <img src="images/USC_logo.png" alt="Viterbi">
-            <span class="button-text">USC Viterbi</span>
-          </div>
-          <!-- Add more buttons as needed... -->
-        </div>
+
+  <div id="container">
+    <h1>Donate</h1>
+    <p><strong>Donate now, close the gender gap</strong></p>
+    <p>Your small devotion matters. Donate for closing the gender gap and support girls in STEM.</p>
+    <p><strong>Choose an organization</strong></p>
+
+    <div class="button-container">
+      <div class="circle-button" onclick="openPopup('AthenaHacks')">
+        <img src="images/athenahacks_logo.png" alt="athenaHacks">
+        <span class="button-text">AthenaHacks</span>
       </div>
-    
-  </body>
+
+      <div class="circle-button" onclick="openPopup('AWIS')">
+        <img src="images/AWIS_logo.png" alt="AWIS">
+        <span class="button-text">Association for Women in Science</span>
+      </div>
+
+      <div class="circle-button" onclick="openPopup('USC Viterbi')">
+        <img src="images/USC_logo.png" alt="Viterbi">
+        <span class="button-text">USC Viterbi</span>
+      </div>
+      <!-- Add more buttons as needed... -->
+    </div>
+  </div>
+
+  <!-- Your popup content... -->
+  <div id="popup">
+    <span id="closeButton" onclick="closePopup">&times;</span>
+    <div id="popupContent">
+      <h2>Donate</h2>
+      <p>Thank you for your devotion.</p>
+      <input type="number" placeholder="$">
+      <button type="submit" onclick="closePopup()">Start donating</button>
+    </div>
+  </div>
+
+  <script>
+    function openPopup(organization) {
+      document.getElementById("popupContent").innerHTML = `
+        <h2>Donate</h2>
+        <p>Thank you for your devotion.</p>
+        <input type="number" placeholder="$">
+        <button type="submit" onclick="closePopup()">Start donating</button>
+      `;
+      document.getElementById("popup").style.display = "block";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+  <script src="script.js"></script>
+
+</body>
+
 </html>
