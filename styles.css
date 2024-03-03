@@ -83,15 +83,18 @@ body, html {
 #left-side, #right-side {
     width: 50%;
     padding: 20px;
-}
+}    
 
 .flight-ticket {
-    background-image: url('path_to_your_image.jpg'); /* Replace with your image path */
-    background-size: cover;
-    height: 200px; /* Adjust as necessary */
-    margin-bottom: 20px;
-    padding: 20px;
+    background-image: url('images/flightTicket.png'); /* Replace with your image path */
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 148px; /* Adjust as necessary */
+    width: 300px;
+    padding: 30px;
 }
+
+
 
 .personal-ride {
     border: 1px solid #ccc;
@@ -99,10 +102,19 @@ body, html {
     padding: 10px;
 }
 
-.personal-ride .ride-info {
+.ride-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction:column;
+
+}
+.personal-ride{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction:row;
+
 }
 
 button {
