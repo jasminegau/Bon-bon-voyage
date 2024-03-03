@@ -11,15 +11,15 @@ function bookingSearch() {
     const Time = document.getElementById('time').value;
     const NumPass = document.getElementById('num-passengers').value;
 
-    const newResult = {
-        StartLoc: StartLoc,
-        DestLoc: DestLoc,
-        Date: Date,
-        Time: Time,
-        NumPass: NumPass
-    };
+    // const newResult = {
+    //     StartLoc: StartLoc,
+    //     DestLoc: DestLoc,
+    //     Date: Date,
+    //     Time: Time,
+    //     NumPass: NumPass
+    // };
 
-    searchResults.push(newResult);
+    // searchResults.push(newResult);
 
     push(ref(db, 'trips'), {
         StartLoc: StartLoc,
@@ -29,28 +29,7 @@ function bookingSearch() {
         NumPass: NumPass
     });
 
-    displaySearchResults(searchResults);
- 
-    // RETRRIVEING DATA
-    // const tripRef = ref(db, 'trips');
-    // onValue(tripRef, (snapshot) => {
-    //     const data = snapshot.val();
-    //     console.log('data', data);
- 
- 
- 
- 
-    //     document.getElementById('display').innerHTML += `
-    //         <div>${JSON.stringify(data)}</div>
-    //     `;
-    // });
- 
- 
- 
- 
- 
- 
- 
+    // displaySearchResults(searchResults);
  
     // PUSHING WITH RANDOM ID
  
@@ -62,16 +41,37 @@ function bookingSearch() {
     //   });
 }
 
- function displaySearchResults(results){
-    console.log("displaying search results", results);
+
+// RETRRIVEING DATA
+const tripRef = ref(db, 'trips');
+onValue(tripRef, (snapshot) => {
+    const data = snapshot.val();
+    if (data){
+        Object.keys(data).forEach(tripId => {
+            const tripData = data[tripId];
+            displaySearchResults(tripData);
+            console.log(tripId);
+            console.log(tripData);
+        });
+    }
+    // console.log('data', data);
+    // document.getElementById('display').innerHTML += `
+    //     <div>${JSON.stringify(data)}</div>
+    // `;
+});
+ 
+
+ function displaySearchResults(result){
+
+    console.log("displaying search result", result);
     const resultsContainer = document.getElementById("results-container");
 
-    // Check if there are any results
-    if (results.length > 0) {
-        // Make the results container visible
+    // // Check if there are any results
+    // if (results.length > 0) {
+    //     // Make the results container visible
         resultsContainer.style.display = "block";
 
-        results.forEach(result => {
+    //     results.forEach(result => {
             // Create a div element for the result
             const resultElement = document.createElement("div");
             resultElement.classList.add("result-item");
@@ -104,11 +104,11 @@ function bookingSearch() {
     
             // Append the result element to the results container
             resultsContainer.appendChild(resultElement);
-        });
-    } else {
-        // If there are no results, keep the container invisible
-        resultsContainer.style.display = "none";
-    }
+    //     });
+    // } else {
+    //     // If there are no results, keep the container invisible
+    //     resultsContainer.style.display = "none";
+    // }
  }
  
  function loaded(){
