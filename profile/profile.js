@@ -91,6 +91,18 @@ function loaded(){
    }).catch((error) => {
        console.error(error);
    });
+
+   function toggleHamburgerMenu() {
+    var menu = document.getElementById('hamburger-dropdown');
+    if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+    } else {
+        menu.classList.add('hidden');
+    }
+ }
+ console.log( document.getElementById('hamburger-menu'), 'sdfsdf')
+ document.getElementById('hamburger-menu').addEventListener('click', toggleHamburgerMenu);
+
    // console.log('hey l]apge is loaded');
    // get(child(ref(db, 'users'), `-Ns14WSA_TyTZXMtA_mL`)).then((snapshot) => {
    //     if (snapshot.exists()) {

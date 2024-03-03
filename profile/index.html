@@ -7,27 +7,28 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Bon-Bon Voyage - My Profile</title>
    <link rel="stylesheet" href="../styles.css">
-   <script type="module" src="../firebase.js""></script>
-   <script type="module" src="./profile.js"></script>
+   <script type="module" src="../firebase.js"></script>
+   <script type="module" src="profile.js"></script>
+   <!-- <script type="module" src="../script.js"></script> -->
 </head>
 
 
 <body>
    <nav id="navbar">
-       <div id="hamburger-menu" onclick="toggleHamburgerMenu()">☰</div>
-       <img src="../logo_placeholder.png" alt="Logo" id="logo">
+       <div id="hamburger-menu">☰</div>
+       <img src="../images/logo.png" alt="Logo" id="logo">
        <div id="nav-links">
-           <a href="home.html">Home</a>
-           <a href="booking.html">Booking</a>
-           <a href="message.html">Message</a>
+           <a href="../home.html">Home</a>
+           <a href="../booking.html">Booking</a>
+           <a href="../message.html">Message</a>
        </div>
    </nav>
    <div id="hamburger-dropdown" class="hidden">
-       <a href="profile.html">Profile</a>
-       <a href="donate.html">Donate</a>
+       <a href="index.html">Profile</a>
+       <a href="../donate.html">Donate</a>
        <a href="community_guidelines.html">Community Guidelines</a>
-       <a href="contact.html">Contact Us</a>
-       <a href="report.html">Report</a>
+       <a href="../contact.html">Contact Us</a>
+       <a href="../report.html">Report</a>
    </div>
 
 
@@ -45,7 +46,7 @@
 
 
            <!-- Edit Profile Button -->
-           <button id="edit-profile-btn" >Edit Profile</button>
+           <button id="edit-profile-btn" onclick="toggleEditProfile()">Edit Profile</button>
 
 
            <!-- <div id="display">nothing to display</div> -->
@@ -81,8 +82,5 @@
            </div>
        </div>
 
-
    </body>
-
-
 </html>
