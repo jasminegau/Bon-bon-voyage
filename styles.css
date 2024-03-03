@@ -1,195 +1,222 @@
 body {
     font-family: Arial, sans-serif;
-}
-
-#signin_signup_container {
+ }
+ 
+ 
+ #signin_signup_container {
     width: 300px;
     margin: auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-input, button {
+ }
+ 
+ 
+ input, button {
     display: block;
     width: 100%;
     margin-bottom: 10px;
     padding: 10px;
-}
-
-button {
+ }
+ 
+ 
+ button {
     background-color: #733D7B;
     color: white;
     border: none;
     cursor: pointer;
-}
-
-body, html {
+ }
+ 
+ 
+ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-}
-
-#navbar {
+ }
+ 
+ 
+ #navbar {
     display: flex;
     align-items: center;
     background-color: #733D7B;
     padding: 10px;
     color: white;
-}
-
-#hamburger-menu {
+ }
+ 
+ 
+ #hamburger-menu {
     cursor: pointer;
     margin-right: 20px;
-}
-
-#nav-links a {
+ }
+ 
+ 
+ #nav-links a {
     color: white;
     text-decoration: none;
     margin-left: 20px;
-}
-
-#hamburger-dropdown a {
+ }
+ 
+ 
+ #hamburger-dropdown a {
     display: block;
     padding: 10px;
     text-decoration: none;
     color: black;
-}
-
-#hamburger-dropdown {
+ }
+ 
+ 
+ #hamburger-dropdown {
     position: absolute;
     background-color: #f9f9f9;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     width: 200px;
     z-index: 1;
-}
-
-.hidden {
+ }
+ 
+ 
+ .hidden {
     display: none;
-}
-
-#banner {
-    background-color: #f8f9fa;
-    text-align: center;
-    padding: 20px;
-    font-size: 18px;
-    border-bottom: 1px solid #ddd;
-}
-
-#main-content {
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ #main-content {
     display: flex;
-}
-
-#right-side {
+ }
+ 
+ 
+ #right-side {
     width: 50%;
     padding:20px;
-} 
-#left-side {
+ }
+ #left-side {
     width: 50%;
     padding:20px
-
-} 
-.flight-ticket {
+ 
+ 
+ }
+ .flight-ticket {
     background-image: url('images/flightTicket.png'); /* Replace with your image path */
     background-size: contain;
     background-repeat:no-repeat;
     height: 200px; /* Adjust as necessary */
     width: 900px;
     padding: 30px;
-}
-
-.personal-ride {
+ }
+ 
+ 
+ .personal-ride {
     border: 1px solid #ccc;
     margin-bottom: 20px;
     padding: 10px;
-}
-
-.ride-info {
+ }
+ 
+ 
+ .ride-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction:column;
-
-}
-.personal-ride{
+ 
+ 
+ }
+ .personal-ride{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction:row;
-
-}
-
-#booking-form-container {
+ 
+ 
+ }
+ 
+ 
+ #booking-form-container {
     width: 300px;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-#booking-form input, #booking-form button {
+ }
+ 
+ 
+ #booking-form input, #booking-form button {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-}
-
-#results-container {
+ }
+ 
+ 
+ #results-container {
     margin: 20px auto;
     padding: 20px;
-}
-
-#profile-main {
+ }
+ 
+ 
+ #profile-main {
     width: 100%;
     padding: 20px;
-}
-
-#logo {
+ }
+ 
+ 
+ #logo {
     width: 60px;
     height: auto
-}
-
-#message-container {
+ }
+ 
+ 
+ #message-container {
     display: flex;
     height: 90vh; /* Adjust based on your header/footer size */
-}
-
-#contact-list {
+ }
+ 
+ 
+ #contact-list {
     width: 30%;
     background-color: #f2f2f2;
     overflow-y: auto;
-}
-
-#chat-interface {
+ }
+ 
+ 
+ #chat-interface {
     width: 70%;
     background-color: #fff;
     border-left: 1px solid #ddd;
     overflow-y: auto;
-}
-
-.contact {
+ }
+ 
+ 
+ .contact {
     padding: 10px;
     border-bottom: 1px solid #ddd;
     cursor: pointer;
-}
-
-#edit-profile-btn, #profile-change-save-btn {
+ }
+ 
+ 
+ #edit-profile-btn, #profile-change-save-btn {
     width: 30%;
     background-color: #8AC8F5;
-}
-
-input[type="text"], input[type="email"] {
+ }
+ 
+ 
+ input[type="text"], input[type="email"] {
     width: 80%;
     padding: 8px;
     box-sizing: border-box;
-}
-
-input[type="number"] {
+ }
+ 
+ 
+ input[type="number"] {
     width: 10%;
     padding: 8px;
     box-sizing: border-box;
-}
-
-#avatar {
+ }
+ 
+ 
+ #avatar {
     width: 150px;
     height: auto;
-}
+ }
+ 

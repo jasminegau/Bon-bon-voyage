@@ -15,6 +15,21 @@
         width: 50%;
         font-family: Arial, sans-serif;
     }
+    .image-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        bottom: 0;
+        width: 80%;
+        padding:50px;
+        }
+    .image-container img{
+        width:130px;
+        height:auto;
+        margin:20px;
+    }
 </style>
 
 <!DOCTYPE html>
@@ -58,11 +73,16 @@
             <input type="text" id="subject" name="subject" required><br>
             
             <strong><label for="message">Message:</label><br></strong>
+        
             <textarea id="message" name="message" rows="4" required></textarea><br><br>
             
             <input id="contact-submit-btn" type="submit" value="Submit">
+            <img src="images/cookie.png">
+
         </form>
+
     </div>
+
 
 <script type="module" src="script.js"></script>
 </body>

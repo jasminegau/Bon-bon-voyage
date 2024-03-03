@@ -1,3 +1,4 @@
+
 <style>
     h1{
         font-family: Arial, Helvetica, sans-serif;
@@ -9,7 +10,7 @@
         position: relative;
     }
     .image {
-        width: 100%; 
+        width: 100%;
         height: auto;
         position: relative;
     }
@@ -18,6 +19,7 @@
         height: auto;
         max-width:100%;
     }
+
 
     .text {
         position: absolute;
@@ -28,6 +30,7 @@
         font-size: 20px;
         text-align: center;
     }
+
 
     .flight-info {
         position: relative;
@@ -41,10 +44,23 @@
         padding: 80px;
     }
 
+
     .flight-info span {
         display: block;
         margin-bottom: 5px;
+        font-weight: bold;
+        font-style: italic;
     }
+
+
+    .ride-info {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-style: italic;
+        margin-left: 0;
+    }
+
 
     .buttons {
         display: flex;
@@ -58,6 +74,7 @@
         width:100px;
         border-radius:10%;
         cursor: pointer;
+
 
     }
     #popup{
@@ -80,144 +97,192 @@
     }
 
 
+    #banner {
+        font-style: italic;
+        color: purple;
+        text-align: center;
+        padding: 20px; /* Adjust padding as needed */
+        background-color: white;
+        text-align: center;
+        font-size: 20px;
+        border-bottom: 1px solid #ddd;
+        border-top: 1px #ddd
+    
+    }
+
+
+
+
+
+
 </style>
+
+
+
 
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bon-Bon Voyage - Home</title>
-    <link rel="stylesheet" href="../styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bon-Bon Voyage - Home</title>
+<link rel="stylesheet" href="../styles.css">
 </head>
-    <nav id="navbar">
-        <div id="hamburger-menu">☰</div>
-        <img src="../images/logo.png" alt="Logo" id="logo">
-        <div id="nav-links">
-            <a href="index.html">Home</a>
-            <a href="../booking/index.html">Booking</a>
-            <a href="../message/index.html">Message</a>
-        </div>
-    </nav>
-    <div id="hamburger-dropdown" class="hidden">
-        <a href="../profile/index.html">Profile</a>
-        <a href="../contact_us.html">Contact Us</a>
-        <a href="../report.html">Report</a>
-        <a href="../community_guidelines.html">Community Guide</a>
-        <a href="../donate.html">Donate</a>
+<nav id="navbar">
+    <div id="hamburger-menu">☰</div>
+    <img src="../images/logo.png" alt="Logo" id="logo">
+    <div id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="../booking/index.html">Booking</a>
+        <a href="../message/index.html">Message</a>
     </div>
-    <body>
-        <!-- Navigation Bar from previous example -->
-    
-        <!-- Banner -->
-        <div id="banner">
-            Every 5 rides you book, we donate $5 to the girls community.
+</nav>
+<div id="hamburger-dropdown" class="hidden">
+    <a href="../profile/index.html">Profile</a>
+    <a href="../contact_us.html">Contact Us</a>
+    <a href="../report.html">Report</a>
+    <a href="../community_guidelines.html">Community Guide</a>
+    <a href="../donate.html">Donate</a>
+</div>
+<body>
+    <!-- Navigation Bar from previous example -->
+
+    <!-- Banner -->
+    <div id="banner">
+     
+       
+        <img src="../images/sprinklesbanner.png" style="width: 120%; height: 12%;">
+        Every 5 rides you book, we donate $5 to the girls community!
+    </div>
+
+    <!-- Main Content Area -->
+    <div id="main-content">
+       
+        <!-- Left Side (Flight Tickets) -->
+        <div id="left-side">
+            <h1><p>Upcoming Matched Rides</p></h1>
         </div>
-    
-        <!-- Main Content Area -->
-        <div id="main-content">
-            <!-- Left Side (Flight Tickets) -->
-            <div id="left-side">
-                <h1><p>Upcoming Matched Rides</p></h1>
-            </div>
-    
-            <!-- Right Side (Personal Rides) -->
-            <div id="right-side">
-                <h1><p>Personal Rides</p></h1>
-                <div class="personal-ride">
+
+        <!-- Right Side (Personal Rides) -->
+        <div id="right-side">
+            <h1><p>Personal Rides</p></h1>
+            <div class="personal-ride">
+                <div style="display:flex;">
+                    <img src="../images/cupcake.png" style="width: 70px; height: auto;">
                     <div class="ride-info">
                         <span>Date: 2024-03-02</span>
                         <span>Time: 10:00 AM</span>
                         <span>Destination: JFK</span>
-                    </div>
-                    <div class="buttons">
-                        <button class="edit-button" onclick="editRide(this); openPopup()">Edit</button>
-                        <button class="delete-button" onclick="deleteRide(this); openPopup()">Delete</button>
+
 
                     </div>
-                </div>        
-                <div class="personal-ride">
+                       
+                </div>
+
+
+                <div class="buttons">
+                    <button class="edit-button" onclick="editRide(this); openPopup()">Edit</button>
+                    <button class="delete-button" onclick="deleteRide(this); openPopup()">Delete</button>
+
+
+                </div>
+            </div>       
+            <div class="personal-ride">
+                <div style="display:flex;">
+                    <img src="../images/cupcake.png" style="width: 70px; height: auto;">
                     <div class="ride-info">
                         <span>Date: 2024-03-02</span>
                         <span>Time: 10:00 AM</span>
                         <span>Destination: JFK</span>
+                   
                     </div>
-                    <div class="buttons">
-                        <button class="edit-button" onclick="editRide(this); openPopup()">Edit</button>
-                        <button class="delete-button" onclick="deleteRide(this); openPopup()">Delete</button>
-                    </div>
-                </div>       
-            </div>
-                
-                <!-- More personal rides -->
-            </div>
-          <!-- Your popup content... -->
-          <div id="popup">
-            <span id="closeButton" onclick="closePopup()">&times;</span>
-            <div id="popupContent">
-              <h2>Donate</h2>
-              <p>Thank you for your devotion.</p>
-              <input type="number" placeholder="$">
-              <button type="submit" onclick="closePopup()">Start donating</button>
-            </div>
-          </div>
-          <script>
-            let currentButton; // Variable to store the clicked button
-
-            function openPopup(button) {
-                // Check if the button is the same as the previously clicked button
-                if (currentButton === button) {
-                    return;
-                }
-
-                currentButton = button;
-                let popupContent;
-
-                if (button.classList.contains('edit-button')) {
-                    // Content for Edit button
-                    popupContent = `
-                        <h2>Edit Ride</h2>
-                        <p>Starting Point</p>
-                        <input type="text" id="start" placeholder="Start: Airport/School" required>
-                        <p>Destination</p>
-                        <input type="text" id="dest" placeholder="Destination: Airport/School" required>
-                        <p>Date</p>
-                        <input type="date" id="date" required>
-                        <p>Time</p>
-                        <input type="time" id="time" required>
-                        <p>Number of Passengers</p>
-                        <input type="number" id="num-passengers" placeholder="Number of Passengers" required>
-                        <button type="button" onclick="closePopup()" id="edit">Confirm Ride Edit</button>
-                    `;
-                } else if (button.classList.contains('delete-button')) {
-                    // Content for Delete button
-                    popupContent = `
-                        <h2>Delete Ride</h2>
-                        <p>Are you sure? If you are deleting your trip within 12 hours before the trip you can get reported.</p>
-                        <button type="submit" onclick="closePopup()" id="delete-btn">Delete This Trip</button>
-                    `;
-                }
-
-                document.getElementById("popupContent").innerHTML = popupContent;
-                document.getElementById("popup").style.display = "block";
-            }
-
-            function closePopup() {
-                document.getElementById("popup").style.display = "none";
-            }
-
-            // Assign the onclick events to the buttons
-            document.querySelectorAll('.buttons button').forEach(button => {
-                button.addEventListener('click', () => openPopup(button));
-            });
-
-        </script>
-        
+                </div>
+               
+                <div class="buttons">
+                    <button class="edit-button" onclick="editRide(this); openPopup()">Edit</button>
+                    <button class="delete-button" onclick="deleteRide(this); openPopup()">Delete</button>
+                </div>
+            </div>      
         </div>
+           
+            <!-- More personal rides -->
+        </div>
+      <!-- Your popup content... -->
+      <div id="popup">
+        <span id="closeButton" onclick="closePopup()">&times;</span>
+        <div id="popupContent">
+          <h2>Donate</h2>
+          <p>Thank you for your devotion.</p>
+          <input type="number" placeholder="$">
+          <button type="submit" onclick="closePopup()">Start donating</button>
+        </div>
+      </div>
+      <script>
+        let currentButton; // Variable to store the clicked button
 
-    <script type="module" src="../script.js"></script>
-    <script type="module" src="home.js"></script>
+
+        function openPopup(button) {
+            // Check if the button is the same as the previously clicked button
+            if (currentButton === button) {
+                return;
+            }
+
+
+            currentButton = button;
+            let popupContent;
+
+
+            if (button.classList.contains('edit-button')) {
+                // Content for Edit button
+                popupContent = `
+                    <h2>Edit Ride</h2>
+                    <p>Starting Point</p>
+                    <input type="text" id="start" placeholder="Start: Airport/School" required>
+                    <p>Destination</p>
+                    <input type="text" id="dest" placeholder="Destination: Airport/School" required>
+                    <p>Date</p>
+                    <input type="date" id="date" required>
+                    <p>Time</p>
+                    <input type="time" id="time" required>
+                    <p>Number of Passengers</p>
+                    <input type="number" id="num-passengers" placeholder="Number of Passengers" required>
+                    <button type="button" onclick="closePopup()" id="edit">Confirm Ride Edit</button>
+                `;
+            } else if (button.classList.contains('delete-button')) {
+                // Content for Delete button
+                popupContent = `
+                    <h2>Delete Ride</h2>
+                    <p>Are you sure? If you are deleting your trip within 12 hours before the trip you can get reported.</p>
+                    <button type="submit" onclick="closePopup()" id="delete-btn">Delete This Trip</button>
+                `;
+            }
+
+
+            document.getElementById("popupContent").innerHTML = popupContent;
+            document.getElementById("popup").style.display = "block";
+        }
+
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+
+        // Assign the onclick events to the buttons
+        document.querySelectorAll('.buttons button').forEach(button => {
+            button.addEventListener('click', () => openPopup(button));
+        });
+
+
+    </script>
+   
+    </div>
+
+
+<script type="module" src="../script.js"></script>
+<script type="module" src="home.js"></script>
 </body>
 </html>
+
