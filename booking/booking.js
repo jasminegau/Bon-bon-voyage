@@ -69,6 +69,15 @@ function bookingSearch() {
 
     console.log("displaying search result", result);
     const resultsContainer = document.getElementById("results-container");
+    resultElement = document.createElement("div");
+    resultElement.classList.add("result-item");
+
+    // Create an image element and set its source
+    const imageElement = document.createElement("img");
+    imageElement.src = "path/to/your/image.jpg"; // Replace with the actual path to your image
+    imageElement.alt = "Result Image";
+    imageElement.style.width = "100%"; // Adjust the width if needed
+    resultElement.appendChild(imageElement);
 
     // // Check if there are any results
     // if (results.length > 0) {

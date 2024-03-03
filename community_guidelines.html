@@ -13,6 +13,22 @@
             margin-left: 10px;
             padding: 20px;
         }
+    .image-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        bottom: 0;
+        width: 80%;
+        padding:50px;
+    }
+    .image-container img{
+        width:130px;
+        height:auto;
+        margin:20px;
+    }
+
 </style>
 
 <!DOCTYPE html>
@@ -53,6 +69,10 @@
             </div>
 
         </ul>
+    <div class="image-container">
+        <img src="images/cheesecake.png" alt="cheese">
+        <img src="images/cookie.png" alt="cheese">
+    </div>
 
     </div>
     <script src="../script.js"></script>

@@ -15,6 +15,21 @@
         width: 50%;
         font-family: Arial, sans-serif;
     }
+    .image-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        bottom: 0;
+        width: 80%;
+        padding:50px;
+        }
+    .image-container img{
+        width:130px;
+        height:auto;
+        margin:20px;
+    }
 </style>
 
 <!DOCTYPE html>
@@ -57,6 +72,10 @@
             
             <input id="report-submit-btn" type="submit" value="Submit">
         </form>
+    </div>
+    <div class="image-container">
+        <img src="images/cake.png" alt="cake">
+        <img src="images/donut.png" alt="donut">
     </div>
 
 <script src="script.js"></script>
