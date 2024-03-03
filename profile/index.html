@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Bon-Bon Voyage - My Profile</title>
+   <link rel="stylesheet" href="../styles.css">
+   <script type="module" src="../firebase.js""></script>
+   <script type="module" src="./profile.js"></script>
+</head>
+
+
+<body>
+   <nav id="navbar">
+       <div id="hamburger-menu" onclick="toggleHamburgerMenu()">☰</div>
+       <img src="../logo_placeholder.png" alt="Logo" id="logo">
+       <div id="nav-links">
+           <a href="home.html">Home</a>
+           <a href="booking.html">Booking</a>
+           <a href="message.html">Message</a>
+       </div>
+   </nav>
+   <div id="hamburger-dropdown" class="hidden">
+       <a href="profile.html">Profile</a>
+       <a href="donate.html">Donate</a>
+       <a href="community_guidelines.html">Community Guidelines</a>
+       <a href="contact.html">Contact Us</a>
+       <a href="report.html">Report</a>
+   </div>
+
+
+   <body>
+       <!-- Main Content Area -->
+       <div id="profile-main">
+           <!-- Display User Information -->
+           <h2>User Profile</h2>
+           <div id="user-info">
+               <p id="name-display"><strong>Name:</strong> John Doe</p>
+               <p id="email-display"><strong>Email:</strong> johndoe@example.com</p>
+               <p id="phone-display"><strong>Phone:</strong> +1234567890</p>
+               <p id="location-display"><strong>Location:</strong> City, Country</p>
+           </div>
+
+
+           <!-- Edit Profile Button -->
+           <button id="edit-profile-btn" >Edit Profile</button>
+
+
+           <!-- <div id="display">nothing to display</div> -->
+
+
+           <!-- Edit Profile Section (Initially Hidden) -->
+           <div id="edit-profile" style="display: none;">
+               <h3>Edit Profile</h3>
+               <div id="profile-form">
+                   <label for="name">Name:</label>
+                   <input type="text" id="name" name="name" required><br><br>
+
+
+                   <label for="email">Email:</label>
+                   <input type="email" id="email" name="email" required><br><br>
+                   <input type="phone" id="phone" name="phone" required><br><br>
+                   <input type="text" id="location" name="location" required><br><br>
+
+
+                   <label for="age">Age:</label>
+                   <input type="text" id="age" name="age"><br><br>
+
+
+                   <label for="gender">Gender:</label>
+                   <input type="radio" id="gender" name="gender" value="male">Male<br>
+                   <input type="radio" id="gender" name="gender" value="female">Female<br>
+                   <input type="radio" id="gender" name="gender" value="other">Other/Prefer Not to Say<br>
+                   <br>
+
+
+                   <button id="save">Save Changes</button>
+               </div>
+           </div>
+       </div>
+
+
+   </body>
+
+
+</html>
