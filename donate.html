@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bon-Bon Voyage - Donate</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    h1 {
+      font-size: 36px;
+      margin: 0;
+      text-align: center;
+    }
+
+    #container {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding:20px;
+    }
+
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .circle-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px; /* Adjust margin as needed */
+    }
+
+    .circle-button img {
+      width: 80px; /* Adjust image size as needed */
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .button-text {
+      margin-top: 5px; /* Adjust margin to set the spacing between image and text */
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="navbar">
+        <div id="hamburger-menu" onclick="toggleHamburgerMenu()">☰</div>
+        <img src="images/logo.png" alt="Logo" id="logo" id="logo">
+        <div id="nav-links">
+            <a href="home.html">Home</a>
+            <a href="booking.html">Booking</a>
+            <a href="message.html">Message</a>
+  </nav>
+
+  <div id="hamburger-dropdown" class="hidden">
+        <a href="profile.html">Profile</a>
+        <a href="donate.html">Donate</a>
+        <a href="community_guidelines.html">Community Guidelines</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="report.html">Report</a>
+  </div>
+  </body>
+  <body>
+    <div id="container">
+        <h1>Donate</h1>
+        <p><strong>Donate now, close the gender gap</strong></p>
+        <p>Your small devotion matters. Donate for closing the gender gap and support girls in STEM.</p>
+        <p><strong>Choose an organization</strong></p>
+        <div class="button-container">
+          <div class="circle-button">
+            <img src="images/athenahacks_logo.png" alt="athenaHacks">
+            <span class="button-text">AthenaHacks</span>
+          </div>
+          <div class="circle-button">
+            <img src="images/AWIS_logo.png" alt="AWIS">
+            <span class="button-text">Association for Women in Science</span>
+          </div>
+          <div class="circle-button">
+            <img src="images/USC_logo.png" alt="Viterbi">
+            <span class="button-text">USC Viterbi</span>
+          </div>
+          <!-- Add more buttons as needed... -->
+        </div>
+      </div>
+    
+  </body>
+</html>
