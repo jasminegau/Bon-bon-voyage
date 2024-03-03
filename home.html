@@ -1,18 +1,49 @@
 <style>
-    .image{
-    width:100%;
-    height:auto;
+    .image {
+        width: 100%;
+        max-width: 100px; /* Adjust the max-width to your desired value */
+        height: auto;
+        position: relative;
     }
+
+    .flight-ticket {
+        position: relative;
+    }
+    .flight-ticket img{
+        width: 100%;
+        height: auto;
+        max-width:100%;
+    }
+
     .text {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        color: white;
-        font-size: 24px;
+        color: #000;
+        font-size: 20px;
         text-align: center;
     }
+
+    .flight-info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #000;
+        font-size: 18px;
+        text-align: left;
+        width: 100%;
+        margin-top:10px;
+        margin-left:80px;
+    }
+
+    .flight-info span {
+        display: block;
+        margin-bottom: 5px;
+    }
 </style>
+
 
 
 <!DOCTYPE html>
@@ -54,12 +85,12 @@
             <div id="left-side">
                 <!-- Flight Ticket 1 -->
                 <div class="flight-ticket">
-                    <img src=""
+                    <img src="images/flightTicket.png" alt="ticket">
                     <div class="flight-info">
-                        <span class="date">Date: 2024-03-02</span>
+                        <span class="date">Flight Date: 2024.03.02</span>
                         <span class="time">Time: 10:00 AM</span>
                         <span class="companions">Riding with: Alice</span>
-                        <span class="destination">Destination: JFK Airport</span>
+                        <span class="destination">Destination: JFK </span>
                     </div>
                 </div>
                 <!-- Flight Ticket 2 -->

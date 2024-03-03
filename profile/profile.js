@@ -27,9 +27,10 @@ function save() {
    console.log('sdf', db);
    set(ref(db, 'users/-Ns14WSA_TyTZXMtA_mL'), {
        Name: document.getElementById('name').value,
+       Age: document.getElementById('age').value,
+       Pronouns: document.getElementById('pronouns').value,
        Email: document.getElementById('email').value,
-       Phone: document.getElementById('phone').value,
-       Location: document.getElementById('location').value
+       School: document.getElementById('school').value
      });
 
 
@@ -81,10 +82,10 @@ function loaded(){
    get(userRef).then((snapshot) => {
        if (snapshot.exists()) {
            const user = snapshot.val();
-           document.getElementById('name-display').innerHTML = "<strong>Name:</strong> " + user.Name;
+           document.getElementById('name-display').innerHTML = "<strong>Name:</strong> " + user.Name + ", " + user.Age;
+           document.getElementById('pronouns-display').innerHTML = "<strong>Pronouns:</strong> " + user.Pronouns;
            document.getElementById('email-display').innerHTML = "<strong>Email:</strong> " + user.Email;
-           document.getElementById('phone-display').innerHTML = "<strong>Phone:</strong> " + user.Phone;
-           document.getElementById('location-display').innerHTML = "<strong>Location:</strong> " + user.Location;
+           document.getElementById('school-display').innerHTML = "<strong>School:</strong> " + user.School;
        } else {
            console.log("No data available");
        }
