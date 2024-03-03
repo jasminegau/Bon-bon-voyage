@@ -1,0 +1,64 @@
+<style>
+    #report-main{
+        padding: 20px;
+    }
+    h2, p {
+        text-align: center;
+    }
+
+    #report-submit-btn {
+        width: 30%;
+        background-color: #8AC8F5;
+    }
+
+    textarea {
+        width: 50%;
+        font-family: Arial, sans-serif;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bon-Bon Voyage - Report</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="hamburger-menu" onclick="toggleHamburgerMenu()">☰</div>
+        <img src="images/logo.png" alt="Logo" id="logo" id="logo">
+        <div id="nav-links">
+            <a href="home.html">Home</a>
+            <a href="booking.html">Booking</a>
+            <a href="message.html">Message</a>
+        </div>
+    </nav>
+    <div id="hamburger-dropdown" class="hidden">
+        <a href="profile.html">Profile</a>
+        <a href="donate.html">Donate</a>
+        <a href="community_guidelines.html">Community Guidelines</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="report.html">Report</a>
+    </div>
+<body>    
+    <!-- Main Content Area -->
+    <div id="report-main">
+        <h2>Report</h2>
+        <p>We're sorry that you had issues with another user on our platform. Please let us know what happened!</p>
+        <p><em>All reports are anonymous.</em></p>
+        <form id="report-form">
+            <strong><label for="reportee-name">Name of Reportee:</label></strong>
+            <input type="text" id="reportee-name" name="reportee-name" required><br>
+
+            <strong><label for="reason">Reason for Report:</label></strong>
+            <input type="text" id="reason" name="reason" required><br>
+            
+            <input id="report-submit-btn" type="submit" value="Submit">
+        </form>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
