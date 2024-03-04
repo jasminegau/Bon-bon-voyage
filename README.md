@@ -1,5 +1,5 @@
 **Bon-Bon Voyage**
-**Say goodbye to expensive solo trips to the airport!**
+\n**Say goodbye to expensive solo trips to the airport!**
 
 All of our team members have to take the airplane to get home over breaks,
 so we all recognize the cumbersome task of posting on Snapchat and hoping that someone also has a flight around the same time as you so you can Uber together to LAX/back 
